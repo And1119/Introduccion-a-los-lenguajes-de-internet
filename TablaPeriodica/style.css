@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background: #f9f9f9;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.table, .tabla {
+  border-collapse: collapse;
+  margin: auto;
+}
+
+td {
+  border: 1px solid #ccc;
+  width: 5.5%;
+  height: 80px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+td.elemento {
+  padding: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.numero {
+  font-size: 12px;
+}
+
+.simbolo {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.nombre {
+  font-size: 10px;
+}
+
+/* Colores por categorías */
+.alcalino { background: #ffcccc; }
+.alcalinoterreo { background: #ffe0b3; }
+.no-metal { background: #ccffcc; }
+.halogeno { background: #ffff99; }
+.gas-noble { background: #b3e0ff; }
+.metal { background: #e6ccff; }
+
+/* Hover */
+td.elemento:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  background-color: #333;
+  color: #fff;
+}
