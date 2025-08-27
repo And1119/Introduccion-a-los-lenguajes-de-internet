@@ -1,58 +1,113 @@
 body {
   font-family: Arial, sans-serif;
-  padding: 20px;
-  background: #f9f9f9;
+  text-align: center;
+  background: white;
 }
 
 h1 {
-  text-align: center;
   margin-bottom: 20px;
+  color: #003366;
 }
 
-.table, .tabla {
-  border-collapse: collapse;
-  margin: auto;
+.periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, 70px);
+  grid-auto-rows: 80px;
+  gap: 5px;
+  justify-content: center;
 }
 
-td {
-  border: 1px solid #ccc;
-  width: 5.5%;
-  height: 80px;
-  text-align: center;
-  vertical-align: middle;
-}
-
-td.elemento {
-  padding: 5px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.numero {
+.element {
+  border: 1px solid #333;
+  border-radius: 5px;
+  padding: 3px;
   font-size: 12px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.2s ease; /* suaviza las animaciones */
 }
 
-.simbolo {
+.element .number {
+  font-size: 10px;
+  text-align: left;
+}
+
+.element .symbol {
   font-size: 20px;
   font-weight: bold;
 }
 
-.nombre {
+.element .name {
   font-size: 10px;
 }
 
-/* Colores por categorías */
-.alcalino { background: #ffcccc; }
-.alcalinoterreo { background: #ffe0b3; }
-.no-metal { background: #ccffcc; }
-.halogeno { background: #ffff99; }
-.gas-noble { background: #b3e0ff; }
-.metal { background: #e6ccff; }
+.element .mass {
+  font-size: 10px;
+  text-align: right;
+}
 
-/* Hover */
-td.elemento:hover {
-  transform: scale(1.1);
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-  background-color: #333;
-  color: #fff;
+/* Colores por tipo (elementos de la tabla) */
+.no-metal { background: #90EE90; }
+.alcalino { background: #FFB6C1; }
+.alcalinoterreo { background: #FFD700; }
+.metales-transicion { background: #1E90FF; color: white; }
+.otro-metal { background: #87CEEB; }
+.metaloide { background: #FFA07A; }
+.lantanidos { background: #DAA520; }
+.actinidos { background: #FF4500; color: white; }
+.halogeno { background: #BA55D3; color: white; }
+.gas-noble { background: #20B2AA; color: white; }
+
+/* --- Leyenda --- */
+.leyenda {
+  margin-top: 20px;
+}
+
+.leyenda ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 15px;
+}
+
+.leyenda li {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  background: none !important; /* evita que se pinte toda la fila */
+  padding: 3px 6px;
+  border-radius: 4px;
+}
+
+/* Cuadro de color antes del texto */
+.leyenda li::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+  border: 1px solid #333;
+}
+
+/* Colores SOLO para los cuadritos de la leyenda */
+.leyenda li.no-metal::before { background: #90EE90; }
+.leyenda li.alcalino::before { background: #FFB6C1; }
+.leyenda li.alcalinoterreo::before { background: #FFD700; }
+.leyenda li.metales-transicion::before { background: #1E90FF; }
+.leyenda li.otro-metal::before { background: #87CEEB; }
+.leyenda li.metaloide::before { background: #FFA07A; }
+.leyenda li.lantanidos::before { background: #DAA520; }
+.leyenda li.actinidos::before { background: #FF4500; }
+.leyenda li.halogeno::before { background: #BA55D3; }
+.leyenda li.gas-noble::before { background: #20B2AA; }
+
+/* --- Efecto de resaltado con hover --- */
+.element:hover {
+  outline: 3px solid red;   /* borde alrededor */
+  transform: scale(1.1);    /* agranda un poco */
+  z-index: 10;              /* lo trae al frente */
+  position: relative;
 }
