@@ -25,7 +25,8 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: all 0.2s ease; /* suaviza las animaciones */
+  transition: all 0.2s ease; 
+  
 }
 
 .element .number {
@@ -77,7 +78,7 @@ h1 {
   display: flex;
   align-items: center;
   font-size: 14px;
-  background: none !important; /* evita que se pinte toda la fila */
+  background: none !important; 
   padding: 3px 6px;
   border-radius: 4px;
 }
@@ -105,8 +106,8 @@ h1 {
 
 
 .element:hover {
-  outline: 3px solid red;   /* borde alrededor */
-  transform: scale(1.1);    /* agranda un poco */
-  z-index: 10;              /* lo trae al frente */
+  outline: 3px solid red;  
+  transform: scale(1.1);    
+  z-index: 10;              
   position: relative;
 }
