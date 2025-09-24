@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Modal Interactivo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <button id="abrirModalBtn">Mostrar Términos</button>
+
+  <!-- Overlay -->
+  <div id="modalOverlay" class="overlay" aria-hidden="true">
+    <!-- Modal -->
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" aria-describedby="modalDesc" tabindex="-1">
+      <h2 id="modalTitle">Términos y Condiciones</h2>
+      <p id="modalDesc">
+        Este es un ejemplo de ventana modal creada con HTML, CSS y JavaScript.
+      </p>
+      <button id="cerrarModalBtn">Cerrar</button>
+    </div>
+  </div>
+
+  <!-- Script al final para asegurarnos que el DOM ya está cargado -->
+  <script src="script.js"></script>
+</body>
+</html>
