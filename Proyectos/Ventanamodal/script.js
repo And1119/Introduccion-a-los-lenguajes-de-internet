@@ -27,7 +27,7 @@ function handleKeyDown(e) {
     return;
   }
 
-  // Simple focus trap (ciclo cuando hay tab)
+
   if (e.key === 'Tab') {
     const focusable = modal.querySelectorAll('a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])');
     if (!focusable.length) {
